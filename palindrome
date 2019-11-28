@@ -1,0 +1,25 @@
+//stacks in JS , Palindrome
+let letters = []; //stack
+
+let word = "qwe ewq";
+
+let reverse_word = "";
+
+//put letters of word into stack
+for(let i = 0; i < word.length; i++) {
+  letters.push(word[i]);
+}
+
+//pop off from stack in reverse order. because they were
+//put in order, they will be placed in reverse order 
+for(let i = 0; i < word.length;i++){
+  reverse_word += letters.pop();
+}
+
+// if (reverse_word === word){
+//   console.log(word + " is a palindrome.");
+// } else {
+//   console.log(word + " is not a palindrome.");
+// }
+
+reverse_word === word ? console.log(word + " is a palindrome.") : console.log(word + " is not a palindrome");
